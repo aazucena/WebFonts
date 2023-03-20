@@ -1,0 +1,50 @@
+@import "fonts"
+@import "variables"
+
+html, body
+	background-color: $main-color  
+	color: $secondary-color
+
+* 
+	font-family: 'Broken Knight', fallback, sans-serif
+
+
+@for $i from 0 through 9999
+	.fs-#{$i}
+		font-size: $i * 0.25rem 
+
+.fw-normal
+	font-weight: normal !important
+	
+.fw-bold
+	font-weight: bold !important
+
+
+#app
+	height: 100% !important
+	min-height: 100vh
+	overflow: hidden
+
+.container
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	min-height: 100vh
+	height: 100%
+	& > .content-grid
+		padding: 10rem
+		display: inline-grid
+		grid-template-rows: 1fr max-content
+		direction: ltr	
+		flex-direction: row
+		width: 100%
+		max-width: 90vmin
+		& > .small-text
+			text-orientation: upright
+			font-size: 2.5rem
+		& > .medium-text
+			text-orientation: upright
+			font-size: 5rem
+		& > *
+			width: 2rem
